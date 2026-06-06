@@ -74,6 +74,8 @@ Designed posters, promotional materials, and event creatives that increased stud
 
 📧 Email: [mohammedhaneen.pm2003@gmail.com](mailto:mohammedhaneen.pm2003@gmail.com)
 
+📧 Email: [connect.haneen@gmail.com](mailto:connect.haneen@gmail.com)
+
 🔗 LinkedIn: [www.linkedin.com/in/mohammedhaneenpm](http://www.linkedin.com/in/mohammedhaneenpm)
 
 💻 GitHub: https://github.com/MohammedHaneenPM
