@@ -93,7 +93,7 @@ export default function ContactSection() {
           WhatsApp
         </a>
         <a 
-          href="public/resume.pdf"
+          href="https://github.com/MohammedHaneenPM/Portfolio/public/resume.pdf"
           target="_blank"
           download="Mohammed_Haneen_Resume.pdf"
           className="hover-target font-[family-name:var(--font-jetbrains-mono)] text-[12px] md:text-[13px] text-[var(--color-gray)] px-[20px] md:px-[22px] py-[12px] border border-[var(--color-line)] rounded-[30px] transition-all duration-300 hover:text-[var(--color-ink)] hover:border-[var(--color-ink)] text-center flex items-center justify-center gap-[8px]"
