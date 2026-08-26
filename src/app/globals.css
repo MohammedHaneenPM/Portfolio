@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui, sans-serif;
+
+  --color-bg-base: #050505;
+  --color-bg-surface: #0a0a0c;
+  --color-bg-surface2: #111114;
+  --color-ink: #ffffff; /* Pure white */
+  --color-gray: #f4f3ef; /* Off-white instead of grey */
+  --color-gray-dim: #e5e5e5; /* Very light white/grey instead of dim grey */
+  --color-accent-creative: #3b82f6; /* blue */
+  --color-accent-analytics: #a855f7; /* violet */
+  --color-line: rgba(244, 243, 239, 0.1);
+}
+
+:root {
+  --mix: 0; /* 0 = creative (blue) .. 1 = analytics (violet), set by JS based on scroll */
+}
+
+html {
+  scroll-behavior: initial; /* Lenis handles this */
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  letter-spacing: -0.01em; /* Tighter body tracking for premium feel */
+  overflow-x: hidden;
+  cursor: none; /* We use a custom cursor */
+}
+
+/* Base Headings Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+/* Custom Cursor Styles */
+#global-cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-ink);
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              height 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              background 0.3s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+#global-cursor.hover {
+  width: 44px;
+  height: 44px;
+  background-color: var(--color-ink);
+}
+
+@media (max-width: 900px) {
+  #global-cursor {
+    display: none;
+  }
+  body {
+    cursor: default;
+  }
+}
+
+::selection {
+  background: var(--color-accent-creative);
+  color: #000;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes scrollcue {
+  0% { top: -100%; }
+  50% { top: 100%; }
+  100% { top: -100%; }
+}
+
